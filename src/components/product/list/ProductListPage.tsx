@@ -15,7 +15,7 @@ interface IProductItem {
 const ProductListPage = () => {
     const { id } = useParams<{ id: string }>();
     const [products, setProducts] = useState<IProductItem[]>([]);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/products?categoryId=" + id)
